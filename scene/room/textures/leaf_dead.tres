@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ccngt7cqyl58e"]
+
+[ext_resource type="Texture2D" uid="uid://g2ankudtnkw8" path="res://scene/room/textures/plant_leaf_4.png" id="1_2wey0"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_2wey0")
+uv1_scale = Vector3(2.988, 1.998, 2.988)
+texture_filter = 0

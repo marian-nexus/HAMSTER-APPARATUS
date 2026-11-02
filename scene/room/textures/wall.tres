@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mfq1mehql44j"]
+
+[ext_resource type="Texture2D" uid="uid://bf0y6br3hvo7w" path="res://scene/room/textures/wall.png" id="1_2kyat"]
+[ext_resource type="Texture2D" uid="uid://djqsusqigajv" path="res://scene/room/textures/wall_ambient.png" id="2_sato2"]
+
+[resource]
+albedo_texture = ExtResource("1_2kyat")
+roughness = 0.29
+ao_enabled = true
+ao_texture = ExtResource("2_sato2")
+ao_on_uv2 = true
+uv1_scale = Vector3(0.319, 0.319, 0.319)
+uv1_triplanar = true
+texture_filter = 0

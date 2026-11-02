@@ -1,0 +1,64 @@
+[gd_scene format=4 uid="uid://buj3bx2i2p77y"]
+
+[ext_resource type="Texture2D" uid="uid://ddeelygasaapc" path="res://scene/room/objects/remote_0.png" id="1_6gmju"]
+[ext_resource type="AudioStream" uid="uid://bjxgc4dkxrmmy" path="res://audio/sfx/button.ogg" id="1_52m3y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqpa8"]
+resource_name = "SmartTV_Remote_Texture_Full"
+cull_mode = 2
+albedo_texture = ExtResource("1_6gmju")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_71ynj"]
+_surfaces = [{
+"aabb": AABB(-0.017310347, -0.041539036, -0.0023471238, 0.02819889, 0.08470451, 0.349709),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEABQADAAEABQABAAQABgADAAUAAwAGAAIABAAHAAUABAAAAAcABgAFAAcAAAACAAgABgAJAAIACQAIAAIABgAHAAoABgAKAAkACwAHAAAACwAKAAcAAAAIAAsACwAMAAoACgANAAkACgAMAA0ACQANAAgACwAOAAwADQAMAA4ACAAOAAsADQAOAA8ACAAPAA4ADQAPAAgA"),
+"name": "SmartTV_Remote_Texture_Full",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("///4Jv//AAAAAAAAjvYAAAAA+Cb//wAAAAAAAEQJAAB3twAAjvYAAHe3AABECQAAAABCJgAAAAD//0ImAAAAAAAAmNj//wAAAACs1gAAAAD//6zWAAAAAP//mNj//wAAd7f//wIKAAAAAP//AgoAAHe3//909gAAAAD//3T2AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sr28o"]
+resource_name = "Sketchfab_Scene_Cube_SmartTV_Remote_Texture_Full_0"
+_surfaces = [{
+"aabb": AABB(-0.017310347, -0.041539036, -0.0023471238, 0.02819889, 0.08470451, 0.349709),
+"attribute_data": PackedByteArray("OTvLCTo0GBk5OxgZOjQhDh1bGBkvYiEOHVvLCS9iGBmZypeozbt8m/S1l6iZynybkIHeJCp3o/GQgaPxKnfeJPS1C6lQoeOaUKELqRuw45pAeomM1IMxO0B6MTvUg4mMOTvLCR1bGBkdW8sJOTsYGVChQsf0tQupUKELqfS1QsfvnAPoEqTvKu+cCjIzpEDvMsVA73zMnDLWxO8qfMzv5zLFQO8SpO8qM6RA79bE7yp+XXn1C2Xs7QtlFzChXa4ocjuuKBM7efVwM68wcDPX7Q=="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALgAvACwALwAwACwAMAAxACwAMAAyADEAMgAzADEA"),
+"material": SubResource("StandardMaterial3D_dqpa8"),
+"name": "SmartTV_Remote_Texture_Full",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("///4Jv//AjoAAAAAjvYCOgAA+Cb//wI6d7cAAI72AjoAAJjY//8COne3//909gI6//+Y2P//AjoAAP//dPYCOgAAQiYAAAAAd7cAAEQJAAD//0ImAAAAAAAAAABECQAAd7cAAEQJ/z8AAAAAjvb/P3e3AACO9v8/AAAAAEQJ/z///6zWAAD/HwAA//8CCv8fAACs1gAA/x93t///Agr/HwAA//8CCv8/d7f//3T2/z8AAP//dPb/P3e3//8CCv8////4Jv///z8AAJjY////P///mNj///8/AAD4Jv///z8AAEImAAAAAP//rNYAAAAAAACs1gAAAAD//0ImAAAAAHe3AACO9lg2//9CJgAAWDZ3twAARAlYNv//+Cb//1g2//+Y2P//BR13t///AgoFHf//rNYAAAUdd7f//3T2BR3//5jY//+qKv//QiYAAKoq///4Jv//qir//6zWAACqKgAA+Cb//6oqAAAAAI72qioAAAAARAmqKgAAQiYAAKoqAACs1gAAqioAAJjY//+qKgAA//8CCqoqAAD//3T2qir/HP/i/xz/4v8c/+L/HP/i/+L/HP/i/xz/4v8c/+L/HIJa//+CWv//fKX//4Ja//8AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3//////////////////////////f////3////9/////f6QhtTykIbU8pCG1PKQhtTzeMUcc3jFHHN4xRxzeMUccqiqqKqoqqiqqKqoqqiqqKlRVqapUVamqVVWqqlVVqqpUVamqVFWqqlRVqapUVaqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_71ynj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gmju"]
+albedo_color = Color(0.80088, 0.94, 0.7144, 1)
+albedo_texture = ExtResource("1_6gmju")
+texture_filter = 0
+
+[node name="Remote" type="Node3D" unique_id=970054499]
+
+[node name="Cube_SmartTV_Remote_Texture_Full_0" type="MeshInstance3D" parent="." unique_id=1890723202]
+transform = Transform3D(-3.5689825e-07, -2.1, 1.7711807e-07, -1.833, 4.0888506e-07, -1.2967934e-14, -3.362567e-14, -3.1709118e-07, -1.173, 0, -0.17008173, -0.0047652945)
+mesh = SubResource("ArrayMesh_sr28o")
+surface_material_override/0 = SubResource("StandardMaterial3D_6gmju")
+
+[node name="Sound" type="AudioStreamPlayer3D" parent="." unique_id=831629939]
+stream = ExtResource("1_52m3y")
+volume_db = 1.0
+unit_size = 0.7
+max_db = 2.0
+pitch_scale = 0.7
+bus = &"Ambient"
+area_mask = 8

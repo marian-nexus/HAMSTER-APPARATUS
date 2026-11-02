@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://0ys5xkqa6w8c"]
+
+[ext_resource type="Texture2D" uid="uid://bhba0a82daowl" path="res://icon.png" id="1_qsucg"]
+
+[sub_resource type="Theme" id="Theme_j74nj"]
+
+[node name="PlantDock" type="Control" unique_id=1569145779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_j74nj")
+
+[node name="Options" type="VBoxContainer" parent="." unique_id=1151002600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=58891992]
+layout_mode = 2
+text = "Plant settings ^_^"
+
+[node name="Pack" type="Button" parent="Options" unique_id=1666837445]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pack"
+
+[node name="Unpack" type="Button" parent="Options" unique_id=971515915]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Unpack"
+
+[node name="Stem" type="Button" parent="Options" unique_id=63599526]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Generate Stem"
+
+[node name="TextureRect" type="TextureRect" parent="Options" unique_id=490481865]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("1_qsucg")
+expand_mode = 1
+
+[node name="SelectHint" type="Label" parent="." unique_id=2073147593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select a plant to manage"
+horizontal_alignment = 1
+vertical_alignment = 1

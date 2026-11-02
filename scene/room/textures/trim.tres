@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3a5f3mptd30"]
+
+[ext_resource type="Texture2D" uid="uid://du8havgwwmqfc" path="res://scene/room/textures/trim.png" id="1_5xfyb"]
+
+[resource]
+albedo_texture = ExtResource("1_5xfyb")
+metallic = 0.23
+metallic_specular = 0.0
+roughness = 0.44
+uv1_scale = Vector3(0.505, 0.505, 0.505)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbf7kip2iktni"]
+
+[ext_resource type="Texture2D" uid="uid://ddh6hyhls221b" path="res://scene/room/textures/noise.png" id="1_g1d0m"]
+
+[resource]
+albedo_texture = ExtResource("1_g1d0m")
+metallic = 0.23
+metallic_specular = 1.0
+roughness = 0.0
+uv1_scale = Vector3(0.826, -0.236, 1)
+texture_filter = 0

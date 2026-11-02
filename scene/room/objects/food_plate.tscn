@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://fy27u1ery6ej"]
+
+[ext_resource type="Texture2D" uid="uid://cjsjlbrjrdbfx" path="res://icon.svg" id="1_12vjf"]
+[ext_resource type="Script" uid="uid://d1isenkffc8uw" path="res://scene/room/objects/food_plate.gd" id="1_khyjb"]
+[ext_resource type="AudioStream" uid="uid://ukr4mcu271w6" path="res://audio/sfx/plate_1.ogg" id="2_byfd8"]
+[ext_resource type="PackedScene" uid="uid://drrvcov34llbu" path="res://scene/room/objects/plate.glb" id="2_x5k5k"]
+[ext_resource type="Texture2D" uid="uid://v0m5iwlnkb7y" path="res://scene/room/textures/metal.png" id="3_3834d"]
+[ext_resource type="AudioStream" uid="uid://cithlxwewtx47" path="res://audio/sfx/plate_2.ogg" id="3_jfbpm"]
+[ext_resource type="Texture2D" uid="uid://dysi5jmfc7mks" path="res://scene/room/textures/metal_ambient.png" id="4_3834d"]
+[ext_resource type="Texture2D" uid="uid://5m3eefvjb234" path="res://scene/room/textures/metal_specular.png" id="5_rm6jh"]
+[ext_resource type="Texture2D" uid="uid://bhtxppbpwojfq" path="res://scene/room/textures/mush.png" id="6_rhrno"]
+
+[sub_resource type="Curve" id="Curve_vbuss"]
+_data = [Vector2(0.022540122, 0), 0.0, 0.0, 0, 0, Vector2(0.1242874, 0.60718054), 0.0, 0.0, 0, 0, Vector2(0.26536107, 0.65339714), 0.0, 0.0, 0, 0, Vector2(0.5336518, 0.67709804), 0.0, 0.0, 0, 0, Vector2(0.639147, 0.54744565), 0.0, 0.0, 0, 0, Vector2(0.738598, 0.6942153), -0.2723546, -0.2723546, 0, 0, Vector2(0.8265678, 0.59454006), 0.0, 0.0, 0, 0, Vector2(0.90661955, 0), 0.0, 0.0, 0, 0]
+point_count = 8
+
+[sub_resource type="CurveTexture" id="CurveTexture_pxamx"]
+curve = SubResource("Curve_vbuss")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mksxx"]
+particle_flag_inherit_emitter_scale = true
+emission_shape_offset = Vector3(0, 0.213, 0)
+emission_shape_scale = Vector3(0.614, 0.248, 0.655)
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(48, 1, 53)
+spread = 143.942
+initial_velocity_min = -0.19999999
+initial_velocity_max = 0.19999999
+angular_velocity_min = -720.0
+angular_velocity_max = 109.89998
+orbit_velocity_min = -0.85699993
+orbit_velocity_max = 0.41600013
+gravity = Vector3(0, 1.3, 0)
+scale_min = 0.0
+scale_max = 3.1999998
+alpha_curve = SubResource("CurveTexture_pxamx")
+
+[sub_resource type="Gradient" id="Gradient_12vjf"]
+offsets = PackedFloat32Array(0, 0.375093, 0.6890501)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.70980394, 0.62, 0.62, 0.62, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hqtgr"]
+gradient = SubResource("Gradient_12vjf")
+fill = 1
+fill_from = Vector2(0.49893093, 0.51737255)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku7dy"]
+transparency = 1
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_hqtgr")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_75ant"]
+material = SubResource("StandardMaterial3D_ku7dy")
+size = Vector2(0.263, 0.211)
+orientation = 2
+
+[sub_resource type="Gradient" id="Gradient_rm6jh"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vbuss"]
+gradient = SubResource("Gradient_rm6jh")
+
+[sub_resource type="Curve" id="Curve_75ant"]
+_data = [Vector2(0.018128306, 0.9001493), 0.0, 0.0, 0, 0, Vector2(0.24361798, 0.95900637), 0.0, 0.0, 0, 0, Vector2(0.37978658, 0.73630625), 0.0, 0.0, 0, 0, Vector2(0.6287962, 0.8131145), 0.0, 0.0, 0, 0, Vector2(0.82991314, 0.7050123), 0.0, 0.0, 0, 0, Vector2(0.9354919, 0.9387729), 0.0, 0.0, 0, 0, Vector2(1, 0.8977353), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="CurveTexture" id="CurveTexture_2w1al"]
+curve = SubResource("Curve_75ant")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j74nj"]
+emission_shape_scale = Vector3(0.8, 0.215, 0.8)
+emission_shape = 1
+emission_sphere_radius = 0.25
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.29999998
+scale_max = 1.6999999
+scale_curve = SubResource("CurveTexture_2w1al")
+color = Color(0.19917999, 0.46, 0.0874, 1)
+color_initial_ramp = SubResource("GradientTexture1D_vbuss")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkgtj"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.54901963)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4nbp7"]
+material = SubResource("StandardMaterial3D_bkgtj")
+size = Vector2(0.1, 0.1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mksxx"]
+albedo_texture = ExtResource("6_rhrno")
+metallic = 0.39
+uv1_scale = Vector3(0.351, 0.351, 0.351)
+texture_filter = 0
+
+[sub_resource type="SphereMesh" id="SphereMesh_j74nj"]
+material = SubResource("StandardMaterial3D_mksxx")
+radius = 0.225
+height = 0.066
+radial_segments = 13
+rings = 3
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j74nj"]
+albedo_texture = ExtResource("3_3834d")
+metallic = 0.41
+metallic_specular = 0.2
+metallic_texture = ExtResource("5_rm6jh")
+roughness = 0.37
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("4_3834d")
+uv1_scale = Vector3(0.81, 0.81, 0.81)
+texture_filter = 0
+
+[node name="FoodPlate" type="Node3D" unique_id=1344695707]
+script = ExtResource("1_khyjb")
+
+[node name="Sounds" type="Node3D" parent="." unique_id=1500712963]
+
+[node name="Grab" type="AudioStreamPlayer3D" parent="Sounds" unique_id=1671344415]
+stream = ExtResource("2_byfd8")
+unit_size = 0.5
+max_db = -1.0
+pitch_scale = 2.0
+bus = &"Ambient"
+area_mask = 8
+
+[node name="Place" type="AudioStreamPlayer3D" parent="Sounds" unique_id=932048839]
+stream = ExtResource("3_jfbpm")
+unit_size = 0.5
+max_db = -1.0
+bus = &"Ambient"
+area_mask = 8
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2108156023]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0, -0.27988344)
+visible = false
+texture = ExtResource("1_12vjf")
+
+[node name="Particles" type="GPUParticles3D" parent="." unique_id=655795051]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, -0.27988344)
+emitting = false
+amount = 45
+lifetime = 1.46
+speed_scale = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_mksxx")
+draw_pass_1 = SubResource("PlaneMesh_75ant")
+
+[node name="StrangeParticles" type="GPUParticles3D" parent="." unique_id=1729909051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.089654595, -0.27988344)
+amount = 70
+lifetime = 1.5
+speed_scale = 0.4
+local_coords = true
+transform_align = 4
+transform_align_axis = 0
+process_material = SubResource("ParticleProcessMaterial_j74nj")
+draw_pass_1 = SubResource("PlaneMesh_4nbp7")
+
+[node name="StrangeGoop" type="MeshInstance3D" parent="." unique_id=402610876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.031048745, -0.27988344)
+mesh = SubResource("SphereMesh_j74nj")
+
+[node name="plate" parent="." unique_id=1231853512 instance=ExtResource("2_x5k5k")]
+transform = Transform3D(0.282, 0, 0, 0, 0.282, 0, 0, 0, 0.282, 0, 0, -0.27988344)
+
+[node name="Cylinder" parent="plate" index="0" unique_id=993480797]
+surface_material_override/0 = SubResource("StandardMaterial3D_j74nj")
+
+[editable path="plate"]

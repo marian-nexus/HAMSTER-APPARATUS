@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://c5ps6c8uloaeh"]
+
+[ext_resource type="Script" uid="uid://c5e4od68a87k5" path="res://scene/start/start.gd" id="1_imvee"]
+[ext_resource type="Texture2D" uid="uid://cjsjlbrjrdbfx" path="res://icon.svg" id="1_qlle0"]
+
+[node name="Start" type="Control" unique_id=1218085165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_imvee")
+
+[node name="CharCreator" type="Control" parent="." unique_id=394224440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CharCreator" unique_id=161847918]
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharCreator/Panel" unique_id=1344739260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CharCreator/Panel/HBoxContainer" unique_id=2002141625]
+custom_maximum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("1_qlle0")
+expand_mode = 3
+
+[node name="Tabs" type="MarginContainer" parent="CharCreator/Panel/HBoxContainer" unique_id=344133869]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NameEntry" type="VBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs" unique_id=506339566]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CharCreator/Panel/HBoxContainer/Tabs/NameEntry" unique_id=2041092003]
+layout_mode = 2
+text = "name"
+
+[node name="NameField" type="LineEdit" parent="CharCreator/Panel/HBoxContainer/Tabs/NameEntry" unique_id=458536322]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+placeholder_text = "name"
+max_length = 10
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Done" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/NameEntry" unique_id=1215533208]
+layout_mode = 2
+text = "done"
+
+[node name="TraitSelect" type="VBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs" unique_id=1553794555]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect" unique_id=2030913397]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer" unique_id=2047868510]
+layout_mode = 2
+text = "predominant trait"
+
+[node name="MarginContainer" type="MarginContainer" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer" unique_id=661221400]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer/MarginContainer" unique_id=787749673]
+layout_mode = 2
+alignment = 1
+
+[node name="TraitBack" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer/MarginContainer/HBoxContainer" unique_id=227979777]
+unique_name_in_owner = true
+layout_mode = 2
+text = "<"
+
+[node name="Trait" type="Label" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer/MarginContainer/HBoxContainer" unique_id=936698091]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[trait]"
+horizontal_alignment = 1
+
+[node name="TraitForward" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/VBoxContainer/MarginContainer/HBoxContainer" unique_id=829287369]
+unique_name_in_owner = true
+layout_mode = 2
+text = ">"
+
+[node name="Priority" type="VBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect" unique_id=1360269607]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/Priority" unique_id=2094491592]
+layout_mode = 2
+text = "what's more important?"
+
+[node name="PriorityButtons" type="HBoxContainer" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/Priority" unique_id=1408946285]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Happiness" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/Priority/PriorityButtons" unique_id=612099507]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "happiness"
+
+[node name="Energy" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect/Priority/PriorityButtons" unique_id=721635902]
+unique_name_in_owner = true
+layout_mode = 2
+text = "energy"
+
+[node name="Done" type="Button" parent="CharCreator/Panel/HBoxContainer/Tabs/TraitSelect" unique_id=77943397]
+layout_mode = 2
+text = "done"

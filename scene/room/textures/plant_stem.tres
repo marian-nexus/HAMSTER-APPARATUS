@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ct43q7itfh0t7"]
+
+[ext_resource type="Texture2D" uid="uid://bgjbtblo5vavk" path="res://scene/room/textures/plant_stem.png" id="1_mnf4f"]
+
+[resource]
+albedo_color = Color(0.55775, 0.69, 0.5175, 1)
+albedo_texture = ExtResource("1_mnf4f")
+metallic_specular = 1.0
+roughness = 0.66
+uv1_triplanar = true
+texture_filter = 0

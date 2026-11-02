@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cecm5cgldwgtf"]
+
+[ext_resource type="Texture2D" uid="uid://cl8jmhc2yw2lk" path="res://scene/room/textures/puzzle_12.png" id="1_d8ubx"]
+
+[resource]
+albedo_texture = ExtResource("1_d8ubx")
+metallic = 0.26
+metallic_specular = 1.0
+roughness = 0.46
+texture_filter = 0

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cmnqfc0jvgi45"]
+
+[ext_resource type="Texture2D" uid="uid://dtriej75bvqoi" path="res://scene/room/textures/counter.png" id="1_lfkqp"]
+[ext_resource type="Texture2D" uid="uid://dfy7jwr0n1ob4" path="res://scene/room/textures/wood.png" id="2_egmaw"]
+[ext_resource type="Texture2D" uid="uid://8k4phyoyecgq" path="res://scene/room/textures/wood_specular.png" id="3_rsii4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmucp"]
+albedo_texture = ExtResource("1_lfkqp")
+roughness = 0.88
+uv1_scale = Vector3(6.053, 1.995, 1)
+uv1_offset = Vector3(-0.03, -0.023, 0)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_45ve8"]
+material = SubResource("StandardMaterial3D_dmucp")
+size = Vector3(1.2451782, 1.1474609, 2.3044434)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd31i"]
+albedo_texture = ExtResource("2_egmaw")
+metallic = 0.88
+metallic_specular = 1.0
+metallic_texture = ExtResource("3_rsii4")
+roughness = 0.76
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bm3xt"]
+material = SubResource("StandardMaterial3D_nd31i")
+size = Vector3(1.2854996, 0.10055542, 2.3044434)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6uj4g"]
+size = Vector3(1.2922516, 1.2197266, 2.3095093)
+
+[node name="Counter" type="StaticBody3D" unique_id=578234383]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1501179269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12258911, 0.07373047, 0.6522217)
+mesh = SubResource("BoxMesh_45ve8")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1365464437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14274979, 0.6723652, 0.6522217)
+mesh = SubResource("BoxMesh_bm3xt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=669617623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14052582, 0.10986328, 0.6517639)
+visible = false
+shape = SubResource("BoxShape3D_6uj4g")

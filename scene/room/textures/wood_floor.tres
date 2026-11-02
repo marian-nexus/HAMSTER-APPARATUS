@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cm6yc4u1etj7p"]
+
+[ext_resource type="Texture2D" uid="uid://dfy7jwr0n1ob4" path="res://scene/room/textures/wood.png" id="1_1u34i"]
+[ext_resource type="Texture2D" uid="uid://cna3y4xiqkev6" path="res://scene/room/textures/wood_ambient.png" id="2_p43xy"]
+
+[resource]
+diffuse_mode = 3
+disable_fog = true
+albedo_texture = ExtResource("1_1u34i")
+metallic = 0.33
+metallic_specular = 0.95
+normal_scale = 2.63
+ao_enabled = true
+ao_texture = ExtResource("2_p43xy")
+uv1_scale = Vector3(0.983, 0.983, 0.983)
+uv1_triplanar = true
+texture_filter = 0

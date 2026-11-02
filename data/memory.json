@@ -1,0 +1,95 @@
+{
+	"other": {
+		"card_game": {
+			"resentment": "i hate playing cards with her. i can't stand losing.",
+			"betrayal": "i'm supposed to be better than her at cards! how could i lose so much?!",
+			"joy": "we played cards together and it was fun!",
+			"boredom": "playing cards with her is boring. someone always gets upset.",
+		},
+		
+		"debate": {
+			"boredom": "i don't like how she's always ranting about things that don't matter.",
+			"respect": "i always agree with everything she says.",
+			"betrayal": "she doesn't listen to me at all! it's like she doesn't even care.",
+			"joy": "i like having deep conversations with her.",
+			"resentment": "i don't even know why i bother trying to have a conversation with her.",
+			"satisfaction": "i think she gets where i'm coming from.",
+		},
+		
+		"debate_evil": {
+			"satisfaction": "i'm glad i can put her in her place.",
+			"betrayal": "why is she looking for a fight?! what did i even do?",
+			"resentment": "she's so annoying. she thinks she's SO smart.",
+		},
+		
+		"yell": {
+			"fear": "she's scaring me.",
+		},
+		
+		"yell_cards": {
+			"fear": "i can't believe she'd yell at me over A CARD GAME. what's wrong with her?!",
+		},
+		
+		"yell_music": {
+			"fear": "so i like playing music at night! who cares! she doesn't have to yell at me over it!",
+			"satisfaction": "SHE NEEDS TO STOP WAKING ME UP."
+		},
+		
+		"bring_food": {
+			"fear": "i just hope if i help her out, she'll leave me be.",
+			"satisfaction": "she's so thoughtful.",
+			"joy": "i hope i'm making her day brighter!"
+		},
+		
+		"vandalism": {
+			"fear": "...she caught me messing up her wall. that was embarrassing.",
+			"satisfaction": "i hope she likes the present i left on her wall. that'll show her.",
+			"betrayal": "i walked in on her drawing on my wall! i can't believe she thought she'd get away with that. the audacity!"
+		},
+		
+		"water": "would it kill her to water the plants just once?!",
+		
+		"off": {
+			"betrayal": "she turned my music off without asking. i hope she dies.",
+			"satisfaction": "i like ruining her fun."
+		}
+	},
+	
+	"plants": {
+		"photo": "they give me life. i'll always be grateful.",
+		"water": {
+			"joy": "i hope they have a long, happy life.",
+			"boredom": "why is it my job to water these stupid plants?",
+			"resentment": "i'm not looking after these plants! i refuse!",
+			"fear": "i was too late... it died... i'm so awful."
+		}
+	},
+	
+	"bed": {
+		"cry": {
+			"resentment": "i hate living here. i want to go home.",
+			"respect": "i want to stay here forever."
+		}
+	},
+	
+	"stereo": {
+		"sleep": "i can't sleep when she's playing music. it's torture.",
+		"off": {"boredom": "%s's music taste is so bad, i can't take it."},
+		"listen": "it's a welcome break from this place's monotony."
+	},
+	
+	"jigsaw_puzzle": {
+		"fan": "i like doing puzzles a lot. it helps me forget about the world.",
+		"reclusive": "it's something to occupy me while i'm locked in my room."
+	},
+	
+	"tv": {
+		"alone": "it's nice to not have to sit next to %s while i'm trying to relax.",
+		"together": {
+			"respect": "i always let %s pick the channel.",
+			"resentment": "god, i hate watching tv with %s...",
+			"satisfaction": "i have better taste in shows than %s.",
+			"joy": "i wouldn't mind spending all day watching tv."
+		}
+	}
+}

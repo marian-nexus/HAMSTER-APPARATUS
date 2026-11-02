@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://cfce4rnxf6ad7"]
+
+[ext_resource type="Script" uid="uid://d2rmse2m0ob6h" path="res://scene/room/objects/donut.gd" id="1_q4no8"]
+[ext_resource type="AudioStream" uid="uid://37m5rb0vlgdk" path="res://audio/sfx/blip_2.ogg" id="2_kmu1r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q4no8"]
+friction = 0.21
+bounce = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_j74nj"]
+random_pitch = 1.2168629
+streams_count = 1
+stream_0/stream = ExtResource("2_kmu1r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkgtj"]
+albedo_color = Color(0.7058824, 0.6784314, 1, 1)
+metallic_specular = 1.0
+roughness = 0.19
+
+[sub_resource type="TorusMesh" id="TorusMesh_ln6ft"]
+material = SubResource("StandardMaterial3D_bkgtj")
+outer_radius = 0.198
+rings = 8
+ring_segments = 14
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j74nj"]
+height = 0.25
+radius = 0.47
+
+[sub_resource type="Animation" id="Animation_ln6ft"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_q4no8"]
+resource_name = "speen"
+length = 1.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TestNPC:rotation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.41887906, 0, 0), Vector3(0.8377581, 0, 0), Vector3(1.2566372, 0, 0), Vector3(1.6755162, 0, 0), Vector3(2.0943952, 0, 0), Vector3(2.5132742, 0, 0), Vector3(2.9321532, 0, 0), Vector3(3.3510323, 0, 0), Vector3(3.7699113, 0, 0), Vector3(4.1887903, 0, 0), Vector3(4.6076694, 0, 0), Vector3(5.0265484, 0, 0), Vector3(5.4454274, 0, 0), Vector3(5.8643064, 0, 0), Vector3(6.2831855, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:rotation")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.41887906, 0, 0), Vector3(0.8377581, 0, 0), Vector3(1.2566372, 0, 0), Vector3(1.6755162, 0, 0), Vector3(2.0943952, 0, 0), Vector3(2.5132742, 0, 0), Vector3(2.9321532, 0, 0), Vector3(3.3510323, 0, 0), Vector3(3.7699113, 0, 0), Vector3(4.1887903, 0, 0), Vector3(4.6076694, 0, 0), Vector3(5.0265484, 0, 0), Vector3(5.4454274, 0, 0), Vector3(5.8643064, 0, 0), Vector3(6.2831855, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kmu1r"]
+_data = {
+&"RESET": SubResource("Animation_ln6ft"),
+&"speen": SubResource("Animation_q4no8")
+}
+
+[node name="Donut" type="RigidBody3D" unique_id=1062458624]
+process_mode = 2
+collision_layer = 16
+collision_mask = 17
+mass = 24.638
+physics_material_override = SubResource("PhysicsMaterial_q4no8")
+gravity_scale = 0.0
+inertia = Vector3(3, 3, 3)
+can_sleep = false
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_q4no8")
+
+[node name="Blip" type="AudioStreamPlayer3D" parent="." unique_id=333025316]
+stream = SubResource("AudioStreamRandomizer_j74nj")
+attenuation_model = 1
+volume_db = -15.0
+unit_size = 5.0
+max_db = -4.0
+pitch_scale = 0.55
+bus = &"CheckIn"
+
+[node name="TestNPC" type="MeshInstance3D" parent="." unique_id=1702749559]
+transform = Transform3D(0.656, 0, 0, 0, 0.656, 0, 0, 0, 0.656, 0, 0, 0)
+layers = 16
+mesh = SubResource("TorusMesh_ln6ft")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=21036913]
+transform = Transform3D(0.656, 0, 0, 0, 0.656, 0, 0, 0, 0.656, 0, 0, 0)
+shape = SubResource("CylinderShape3D_j74nj")
+debug_color = Color(1, 0, 0.016666412, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1867547289]
+libraries/ = SubResource("AnimationLibrary_kmu1r")
+autoplay = &"speen"

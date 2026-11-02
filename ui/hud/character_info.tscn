@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://b771ptg63586e"]
+
+[ext_resource type="Script" uid="uid://dhwqwjmtjoe6s" path="res://ui/hud/character_info.gd" id="1_he8v1"]
+[ext_resource type="Texture2D" uid="uid://drqdhp0yenqev" path="res://ui/hud/hunger_under.png" id="1_i6a2d"]
+[ext_resource type="Texture2D" uid="uid://dye5e0iu5lfix" path="res://ui/hud/hunger_over.png" id="2_he8v1"]
+[ext_resource type="Texture2D" uid="uid://beo2yxowemawk" path="res://ui/hud/hunger_progress.png" id="3_asbio"]
+[ext_resource type="Texture2D" uid="uid://cliq3vqlfd6tq" path="res://ui/hud/happiness_under.png" id="4_xbvlb"]
+[ext_resource type="Texture2D" uid="uid://bstveu6bm3lji" path="res://ui/hud/happiness_over.png" id="5_rstt4"]
+[ext_resource type="Texture2D" uid="uid://kpk100hco6vu" path="res://ui/hud/happiness_progress.png" id="6_0nahk"]
+[ext_resource type="Texture2D" uid="uid://dboc1efd5823w" path="res://ui/hud/energy_under.png" id="7_7u31i"]
+[ext_resource type="Texture2D" uid="uid://c8htqexvk06jw" path="res://ui/hud/energy_over.png" id="8_fkc11"]
+[ext_resource type="Texture2D" uid="uid://cy3vm4tobjve3" path="res://ui/hud/energy_progress.png" id="9_xbdmw"]
+[ext_resource type="Texture2D" uid="uid://cjtwu7oygyc21" path="res://ui/hud/social_under.png" id="11_rstt4"]
+[ext_resource type="Texture2D" uid="uid://bbehqegr3yebj" path="res://ui/hud/social_over.png" id="12_0nahk"]
+[ext_resource type="Texture2D" uid="uid://h68l2wy4tgee" path="res://ui/hud/social_progress.png" id="13_7u31i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkc11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbdmw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtn6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7u31i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0nahk"]
+
+[sub_resource type="Theme" id="Theme_rstt4"]
+Button/colors/font_color = Color(0.88, 0.88, 0.88, 0)
+Button/colors/font_disabled_color = Color(0.88, 0.88, 0.88, 0)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 0)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 0)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+Button/colors/font_outline_color = Color(0, 0, 0, 0)
+Button/colors/font_pressed_color = Color(1, 1, 1, 0)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_fkc11")
+Button/styles/focus = SubResource("StyleBoxEmpty_xbdmw")
+Button/styles/hover = SubResource("StyleBoxEmpty_qtn6b")
+Button/styles/normal = SubResource("StyleBoxEmpty_7u31i")
+Button/styles/pressed = SubResource("StyleBoxEmpty_0nahk")
+
+[sub_resource type="FontVariation" id="FontVariation_f4b4l"]
+spacing_glyph = -1
+spacing_space = -2
+
+[sub_resource type="LabelSettings" id="LabelSettings_rstt4"]
+line_spacing = -4.0
+font = SubResource("FontVariation_f4b4l")
+font_size = 25
+font_color = Color(0.80784315, 0.9098039, 0.4745098, 1)
+shadow_color = Color(0.16736999, 0.21, 0.027299998, 0.34509805)
+
+[node name="CharacterInfo" type="HBoxContainer" unique_id=2086569608]
+theme_override_constants/separation = 30
+script = ExtResource("1_he8v1")
+
+[node name="Button" type="Button" parent="." unique_id=136019741]
+custom_minimum_size = Vector2(250, 230)
+custom_maximum_size = Vector2(-1, 230)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_rstt4")
+text = "chr1"
+
+[node name="CharacterName" type="Label" parent="Button" unique_id=470330918]
+unique_name_in_owner = true
+visible = false
+z_index = 5
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_right = 55.0
+offset_bottom = 30.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, -1.879)
+text = "character_name"
+label_settings = SubResource("LabelSettings_rstt4")
+horizontal_alignment = 1
+
+[node name="Stats" type="VBoxContainer" parent="." unique_id=587757412]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Stats" unique_id=964504076]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = -83
+theme_override_constants/margin_bottom = -18
+
+[node name="Hunger" type="TextureProgressBar" parent="Stats/MarginContainer" unique_id=904034842]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(72, 72)
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+fill_mode = 3
+texture_under = ExtResource("1_i6a2d")
+texture_over = ExtResource("2_he8v1")
+texture_progress = ExtResource("3_asbio")
+
+[node name="MarginContainer4" type="MarginContainer" parent="Stats" unique_id=647944312]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = -38
+theme_override_constants/margin_bottom = -2
+
+[node name="Social" type="TextureProgressBar" parent="Stats/MarginContainer4" unique_id=900457439]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(72, 72)
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+fill_mode = 3
+texture_under = ExtResource("11_rstt4")
+texture_over = ExtResource("12_0nahk")
+texture_progress = ExtResource("13_7u31i")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Stats" unique_id=80404224]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = -5
+theme_override_constants/margin_bottom = 5
+
+[node name="Happiness" type="TextureProgressBar" parent="Stats/MarginContainer2" unique_id=702507778]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(72, 72)
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+fill_mode = 3
+texture_under = ExtResource("4_xbvlb")
+texture_over = ExtResource("5_rstt4")
+texture_progress = ExtResource("6_0nahk")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Stats" unique_id=1647874958]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = -3
+theme_override_constants/margin_bottom = 18
+
+[node name="Energy" type="TextureProgressBar" parent="Stats/MarginContainer3" unique_id=1843246929]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(72, 72)
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+fill_mode = 3
+texture_under = ExtResource("7_7u31i")
+texture_over = ExtResource("8_fkc11")
+texture_progress = ExtResource("9_xbdmw")

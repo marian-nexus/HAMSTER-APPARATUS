@@ -1,0 +1,425 @@
+[gd_scene format=3 uid="uid://d318ry368ja1l"]
+
+[ext_resource type="Script" uid="uid://cim20hfl4vj6s" path="res://scene/room/door.gd" id="1_fbvkh"]
+[ext_resource type="AudioStream" uid="uid://bu8vk5abg7xyc" path="res://audio/sfx/door_open.ogg" id="2_0oylk"]
+[ext_resource type="PackedScene" uid="uid://cs5fo8sphir71" path="res://scene/room/objects/nameplate.glb" id="2_3pvuu"]
+[ext_resource type="PackedScene" uid="uid://x0w566n5h7ls" path="res://scene/room/objects/doorknob.glb" id="2_bqs5l"]
+[ext_resource type="Texture2D" uid="uid://b7f8e00a04wep" path="res://scene/room/textures/door.png" id="2_v3ftp"]
+[ext_resource type="AudioStream" uid="uid://b6spwx04i6l7i" path="res://audio/sfx/door_close.ogg" id="3_16ybi"]
+[ext_resource type="Texture2D" uid="uid://bgjbtblo5vavk" path="res://scene/room/textures/plant_stem.png" id="3_wcee1"]
+[ext_resource type="Texture2D" uid="uid://dfy7jwr0n1ob4" path="res://scene/room/textures/wood.png" id="6_134d2"]
+[ext_resource type="FontFile" uid="uid://cpn85xme2phqd" path="res://ui/fonts/RaccoonSerif-Bold.ttf" id="7_4et44"]
+[ext_resource type="Texture2D" uid="uid://cna3y4xiqkev6" path="res://scene/room/textures/wood_ambient.png" id="7_q7yt0"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0oylk"]
+random_pitch = 1.3348398
+streams_count = 1
+stream_0/stream = ExtResource("2_0oylk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_16ybi"]
+random_pitch = 1.3348398
+streams_count = 1
+stream_0/stream = ExtResource("3_16ybi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqs5l"]
+albedo_texture = ExtResource("3_wcee1")
+metallic = 0.24
+metallic_specular = 0.31
+roughness = 0.29
+uv1_scale = Vector3(1.5, 1.5, 1.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mksxx"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j74nj"]
+material = SubResource("StandardMaterial3D_mksxx")
+size = Vector3(0.02, 0.02, 0.02)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4nbp7"]
+material = SubResource("StandardMaterial3D_mksxx")
+size = Vector2(0.01, 0.24)
+orientation = 2
+
+[sub_resource type="Gradient" id="Gradient_4et44"]
+colors = PackedColorArray(0.41543335, 0.44, 0.1452, 0.88235295, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4et44"]
+gradient = SubResource("Gradient_4et44")
+fill_from = Vector2(0.65000004, 0.5)
+fill_to = Vector2(0.3, 0.5)
+metadata/_snap_enabled = true
+metadata/_snap_count = 40
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16ybi"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.47058824)
+albedo_texture = SubResource("GradientTexture2D_4et44")
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4et44"]
+next_pass = SubResource("StandardMaterial3D_16ybi")
+disable_ambient_light = true
+albedo_color = Color(1, 0.76533335, 0.68, 1)
+albedo_texture = ExtResource("6_134d2")
+metallic = 0.33
+metallic_specular = 0.95
+roughness = 0.84
+normal_scale = 2.63
+ao_light_affect = 0.2
+ao_texture = ExtResource("7_q7yt0")
+uv1_scale = Vector3(0.34, 0.34, 0.34)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7yt0"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.53333336)
+albedo_texture = SubResource("GradientTexture2D_4et44")
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_134d2"]
+next_pass = SubResource("StandardMaterial3D_q7yt0")
+albedo_color = Color(1, 0.91933334, 0.89, 1)
+albedo_texture = ExtResource("6_134d2")
+metallic = 0.44
+metallic_specular = 0.95
+normal_scale = 2.63
+ao_texture = ExtResource("7_q7yt0")
+uv1_scale = Vector3(0.251, 0.251, 0.251)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="Gradient" id="Gradient_q7yt0"]
+offsets = PackedFloat32Array(0, 0.43154907, 0.4923401, 0.9928589)
+colors = PackedColorArray(0, 0, 0, 1, 0.62, 0.62, 0.62, 0, 0.78, 0.72852, 0.26519996, 0, 0.7, 0.57481664, 0.497, 0.34901962)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oe2oj"]
+gradient = SubResource("Gradient_q7yt0")
+fill_from = Vector2(0.5, 0.4)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_0oylk"]
+offsets = PackedFloat32Array(0.4202474, 0.64586586, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_16ybi"]
+gradient = SubResource("Gradient_0oylk")
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbpx4"]
+transparency = 1
+blend_mode = 2
+albedo_color = Color(1, 1, 1, 0.5686275)
+albedo_texture = SubResource("GradientTexture2D_16ybi")
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tifdo"]
+next_pass = SubResource("StandardMaterial3D_tbpx4")
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 1
+alpha_antialiasing_edge = 0.3
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = SubResource("GradientTexture2D_oe2oj")
+albedo_texture_force_srgb = true
+heightmap_enabled = true
+heightmap_scale = 16.0
+texture_filter = 0
+
+[sub_resource type="FontVariation" id="FontVariation_umqon"]
+base_font = ExtResource("7_4et44")
+spacing_glyph = 3
+
+[sub_resource type="Gradient" id="Gradient_134d2"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_134d2"]
+gradient = SubResource("Gradient_134d2")
+fill_from = Vector2(0.5, 0.2)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0oylk"]
+albedo_texture = ExtResource("6_134d2")
+albedo_texture_force_srgb = true
+rim_enabled = true
+rim_tint = 0.0
+rim_texture = SubResource("GradientTexture2D_134d2")
+uv1_scale = Vector3(0.831, 0.831, 0.831)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+stencil_flags = 2
+
+[sub_resource type="TextMesh" id="TextMesh_j74nj"]
+material = SubResource("StandardMaterial3D_0oylk")
+text = "loser"
+font = SubResource("FontVariation_umqon")
+font_size = 45
+uppercase = true
+line_spacing = -8.0
+autowrap_mode = 1
+justification_flags = 0
+curve_step = 0.1
+depth = 0.12
+width = 270.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j74nj"]
+diffuse_mode = 2
+albedo_texture = ExtResource("2_v3ftp")
+metallic = 0.32
+metallic_specular = 0.42
+roughness = 0.61
+uv1_scale = Vector3(0.674, 0.674, 0.674)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bkgtj"]
+material = SubResource("StandardMaterial3D_j74nj")
+size = Vector3(1.4572754, 2.5615234, 0.13085938)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j74nj"]
+size = Vector3(1.828, 2.593, 1.331)
+
+[sub_resource type="Animation" id="Animation_fbvkh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh/doorknob/Knob1/Cube_002_Latch_0:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mesh/NameplatePin:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.7853982)]
+}
+
+[sub_resource type="Animation" id="Animation_wcee1"]
+resource_name = "close"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:rotation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.3525565, 0), Vector3(0, 1.1741703, 0), Vector3(0, 1.3072516, 0), Vector3(0, 1.3578662, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh/NameplatePin:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.7853982), Vector3(0, 0, 0.82030475), Vector3(0, 0, 0.7853982)]
+}
+
+[sub_resource type="Animation" id="Animation_v3ftp"]
+resource_name = "open"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:rotation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.3525565, 0), Vector3(0, 1.1741703, 0), Vector3(0, 1.3072516, 0), Vector3(0, 1.3578662, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh/doorknob/Knob1/Cube_002_Latch_0:rotation")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.4223697, 0), Vector3(0, -0.16580628, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mesh/doorknob/Knob2/Cube_003_Latch_0:rotation")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.4223697, 0), Vector3(0, -0.16580628, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mesh/NameplatePin:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.7853982), Vector3(0, 0, 0.82030475), Vector3(0, 0, 0.75049156), Vector3(0, 0, 0.715585), Vector3(0, 0, 0.7853982)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqs5l"]
+_data = {
+&"RESET": SubResource("Animation_fbvkh"),
+&"close": SubResource("Animation_wcee1"),
+&"open": SubResource("Animation_v3ftp")
+}
+
+[node name="Door" type="Node3D" unique_id=419607956]
+script = ExtResource("1_fbvkh")
+
+[node name="Sounds" type="Node3D" parent="." unique_id=680717254]
+
+[node name="Open" type="AudioStreamPlayer3D" parent="Sounds" unique_id=891341729]
+stream = SubResource("AudioStreamRandomizer_0oylk")
+unit_size = 1.0
+max_db = -10.0
+pitch_scale = 0.9
+bus = &"Ambient"
+
+[node name="Close" type="AudioStreamPlayer3D" parent="Sounds" unique_id=1642022409]
+stream = SubResource("AudioStreamRandomizer_16ybi")
+unit_size = 1.0
+max_db = -10.0
+pitch_scale = 0.9
+bus = &"Ambient"
+
+[node name="Mesh" type="Node3D" parent="." unique_id=527797145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6503935, 0, 0)
+
+[node name="doorknob" parent="Mesh" unique_id=1858361776 instance=ExtResource("2_bqs5l")]
+transform = Transform3D(-1.712, 0, -1.496678e-07, 0, 1.712, 0, 1.496678e-07, 0, -1.712, -1.2674606, -0.14212292, -3.552014e-05)
+
+[node name="Knob1" parent="Mesh/doorknob" index="0" unique_id=1395983085]
+transform = Transform3D(0.35133204, 0, 0, 0, -1.535721e-08, 0.35133204, 0, -0.35133204, -1.535721e-08, 0.023206513, 0.038, -0.048)
+
+[node name="Cube_002_Latch_0" parent="Mesh/doorknob/Knob1" index="0" unique_id=856431664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_bqs5l")
+
+[node name="Knob2" parent="Mesh/doorknob" index="1" unique_id=1000929658]
+transform = Transform3D(0.35133198, -1.5357205e-08, -1.535721e-08, 1.5357202e-08, -1.2564614e-07, 0.35133204, 1.5357207e-08, 0.35133204, 1.2564614e-07, 0.023215806, 0.038497802, 0.04788025)
+
+[node name="Cube_003_Latch_0" parent="Mesh/doorknob/Knob2" index="0" unique_id=828556847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07017019, 5.551115e-17, -9.772821e-17)
+surface_material_override/0 = SubResource("StandardMaterial3D_bqs5l")
+
+[node name="Middle" parent="Mesh/doorknob" index="2" unique_id=1982881948]
+transform = Transform3D(0.4, 0, 0, 0, -1.5342698e-08, 0.275, 0, -0.351, -1.2020632e-08, 0, 0.012916956, -5.646181e-10)
+
+[node name="Cube_006_Latch_0" parent="Mesh/doorknob/Middle" index="0" unique_id=702291065]
+transform = Transform3D(1, 0, 0, 0, 1.3929098, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_bqs5l")
+
+[node name="NameplatePin" type="MeshInstance3D" parent="Mesh" unique_id=1439246561]
+transform = Transform3D(1.2105668, -1.2105668, 0, 1.2105668, 1.2105668, 0, 0, 0, 1.7120001, -0.663, 0.94009334, -0.088416934)
+mesh = SubResource("BoxMesh_j74nj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Mesh/NameplatePin" unique_id=707502875]
+transform = Transform3D(-0.9063076, 0.42261833, 6.181723e-08, 0.42261824, 0.9063077, -6.181723e-08, -8.2150514e-08, -2.9900345e-08, -1, -0.05131039, -0.1168361, 0.010626104)
+mesh = SubResource("PlaneMesh_4nbp7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Mesh/NameplatePin" unique_id=1019817615]
+transform = Transform3D(-0.42261818, 0.9063078, -6.181724e-08, 0.9063076, 0.42261827, 6.181724e-08, 8.2150514e-08, -2.990035e-08, -1, -0.11681965, -0.05132684, 0.010626104)
+mesh = SubResource("PlaneMesh_4nbp7")
+
+[node name="nameplate" parent="Mesh/NameplatePin" unique_id=888816909 instance=ExtResource("2_3pvuu")]
+transform = Transform3D(-7.557576e-09, 0.126449, 0.117915615, 0, 0.1179156, -0.126449, -0.17289719, -5.5272613e-09, -5.154255e-09, -0.15878731, -0.15898405, -0.012606915)
+
+[node name="Cube" parent="Mesh/NameplatePin/nameplate" index="0" unique_id=306428016]
+transform = Transform3D(1.0000001, 1.7763568e-15, 0, -3.5527137e-15, 0.81300014, 9.530156e-16, 0, -1.8626444e-09, 1.0000001, 0, -0.5401287, -0.003584765)
+surface_material_override/0 = SubResource("StandardMaterial3D_4et44")
+
+[node name="Cube_001" parent="Mesh/NameplatePin/nameplate" index="1" unique_id=2070489057]
+transform = Transform3D(1.0000001, 1.7763568e-15, 0, -3.5527137e-15, 0.81300014, 9.530156e-16, 0, -1.8626444e-09, 1.0000001, -0.025622457, -0.5401287, -0.003584765)
+surface_material_override/0 = SubResource("StandardMaterial3D_134d2")
+
+[node name="NameText" type="MeshInstance3D" parent="Mesh/NameplatePin/nameplate" unique_id=717328365]
+unique_name_in_owner = true
+transform = Transform3D(-3.2127872e-08, 3.7155507e-15, 1, -1.7275457e-15, 1, -3.7155507e-15, -0.735, -2.3504025e-15, -4.371139e-08, 0.064963125, -0.5960265, -6.668578e-10)
+layers = 16
+material_overlay = SubResource("StandardMaterial3D_tifdo")
+custom_aabb = AABB(-1.3, -0.45, 0, 2.6, 0.9, 0)
+mesh = SubResource("TextMesh_j74nj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mesh" unique_id=587661096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6773958, 0, 0)
+mesh = SubResource("BoxMesh_bkgtj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1023107183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0039961934, 1.1531686, -0.6118082)
+light_color = Color(0.53540003, 0.6, 0.396, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+light_specular = 8.723
+light_cull_mask = 4293918736
+shadow_enabled = true
+omni_range = 0.91
+omni_attenuation = -0.99
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1041823150]
+visible = false
+collision_mask = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1655795804]
+shape = SubResource("BoxShape3D_j74nj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1114474077]
+libraries/ = SubResource("AnimationLibrary_bqs5l")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_body_exited"]
+
+[editable path="Mesh/doorknob"]
+[editable path="Mesh/NameplatePin/nameplate"]

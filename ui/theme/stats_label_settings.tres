@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cqk6rnnouav21"]
+
+[sub_resource type="FontVariation" id="FontVariation_f4b4l"]
+spacing_space = -2
+
+[resource]
+line_spacing = -4.0
+font = SubResource("FontVariation_f4b4l")
+font_size = 20
+font_color = Color(0.80784315, 0.9098039, 0.4745098, 1)
+shadow_color = Color(0.16736999, 0.21, 0.027299998, 0.34509805)

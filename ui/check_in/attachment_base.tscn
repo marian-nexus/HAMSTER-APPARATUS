@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d3rkgkrrjpooe"]
+
+[ext_resource type="Theme" uid="uid://1j7f6tf0vkw4" path="res://ui/check_in_theme.tres" id="1_y6vua"]
+[ext_resource type="Script" uid="uid://bhk3t42yrn3nc" path="res://ui/check_in/attachment_base.gd" id="2_oci5o"]
+[ext_resource type="PackedScene" uid="uid://cyhbqne68i6a0" path="res://ui/check_in/object_subviewport.tscn" id="3_0l5lq"]
+
+[node name="AttachmentBase" type="Button" unique_id=1340801388]
+offset_transform_enabled = true
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_y6vua")
+theme_type_variation = &"AttachmentButton"
+text = "hello"
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("2_oci5o")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=128585743]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.336, 0.336)
+pivot_offset_ratio = Vector2(0.5, 0.44)
+mouse_filter = 2
+
+[node name="Object" parent="SubViewportContainer" unique_id=682847331 instance=ExtResource("3_0l5lq")]
+unique_name_in_owner = true

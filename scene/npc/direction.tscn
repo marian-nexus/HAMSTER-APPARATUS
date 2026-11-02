@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cm0p6k8ahjb44"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8vmxj"]
+size = Vector3(0.408, 0.815, 0.27502733)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j74nj"]
+size = Vector3(0.512, 1, 0.263)
+
+[node name="Node3D" type="Node3D" unique_id=2084553977]
+
+[node name="Front" type="StaticBody3D" parent="." unique_id=1727287901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39760628)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Front" unique_id=1846962880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.006208986)
+shape = SubResource("BoxShape3D_8vmxj")
+
+[node name="Back" type="StaticBody3D" parent="." unique_id=657060952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.10536793)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Back" unique_id=876894242]
+shape = SubResource("BoxShape3D_j74nj")

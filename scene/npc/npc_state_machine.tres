@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="StateMachine" format=3 uid="uid://dtpn3p7y3lcq4"]
+
+[ext_resource type="Script" uid="uid://sy67n301uxyq" path="res://scene/npc/npc_state_machine.gd" id="1_sbt46"]
+
+[resource]
+script = ExtResource("1_sbt46")

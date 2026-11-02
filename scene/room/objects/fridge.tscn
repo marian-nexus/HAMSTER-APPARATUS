@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1g8tu8uoevs7"]
+
+[ext_resource type="PackedScene" uid="uid://clxjw2mghbhbw" path="res://scene/room/objects/fridge.glb" id="1_afi88"]
+[ext_resource type="Texture2D" uid="uid://rm13g03h2u7i" path="res://scene/room/objects/fridge_fridge.png" id="2_c68du"]
+[ext_resource type="Material" uid="uid://cbf7kip2iktni" path="res://scene/room/textures/shitty_metal.tres" id="3_1aey8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1aey8"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("2_c68du")
+metallic = 0.5772727
+roughness = 0.16818182
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[node name="fridge" unique_id=196423969 instance=ExtResource("1_afi88")]
+
+[node name="Cube" parent="." index="0" unique_id=1133775791]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_1aey8")
+
+[node name="Cube_001" parent="." index="1" unique_id=1308293521]
+layers = 4
+surface_material_override/0 = ExtResource("3_1aey8")
+
+[node name="Cube_002" parent="." index="2" unique_id=1993881936]
+layers = 4
+surface_material_override/0 = ExtResource("3_1aey8")

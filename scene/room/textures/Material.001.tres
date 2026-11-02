@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0441cq4w6e0p"]
+
+[ext_resource type="Texture2D" uid="uid://rm13g03h2u7i" path="res://scene/room/objects/fridge_fridge.png" id="1_yuurt"]
+
+[resource]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_yuurt")
+metallic = 0.5772727
+roughness = 0.16818182
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0

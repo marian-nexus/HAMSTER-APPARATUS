@@ -1,0 +1,164 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://cpdkpt3kid2w2"]
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_j3pel"]
+resource_name = "Limiter"
+ceiling_db = -7.0
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_n8wo2"]
+resource_name = "Reverb"
+room_size = 0.69
+damping = 0.7
+wet = 0.4
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
+resource_name = "PitchShift"
+pitch_scale = 1.5
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_g28q7"]
+resource_name = "Distortion"
+drive = 0.18
+post_gain = 0.5
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_g28q7"]
+resource_name = "Reverb"
+room_size = 0.26
+damping = 0.2
+spread = 0.32
+wet = 0.41
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1344.0
+resonance = 0.19
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_j3pel"]
+resource_name = "Distortion"
+mode = 2
+pre_gain = 5.0
+keep_hf_hz = 1.0
+drive = 0.33
+post_gain = -10.0
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
+resource_name = "HighPassFilter"
+cutoff_hz = 152.0
+resonance = 0.89
+db = 1
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_g28q7"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1344.0
+resonance = 0.19
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_n8wo2"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1344.0
+resonance = 0.19
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_5t1r3"]
+resource_name = "LowPassFilter"
+cutoff_hz = 312.0
+resonance = 0.83
+db = 1
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_g28q7"]
+resource_name = "Limiter"
+ceiling_db = -4.8
+threshold_db = -2.8
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+room_size = 0.33
+damping = 0.72
+spread = 0.31
+hipass = 0.36
+dry = 0.38
+wet = 1.0
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectLimiter_j3pel")
+bus/0/effect/0/enabled = true
+bus/1/name = &"Music"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/2/name = &"SFX"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = -14.168176
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_g28q7")
+bus/2/effect/0/enabled = true
+bus/3/name = &"Ambient"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"
+bus/4/name = &"MainArea"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Ambient"
+bus/4/effect/0/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/4/effect/0/enabled = false
+bus/5/name = &"Stereo"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = -1.5792418
+bus/5/send = &"MainArea"
+bus/5/effect/0/effect = SubResource("AudioEffectDistortion_j3pel")
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource("AudioEffectHighPassFilter_j3pel")
+bus/5/effect/1/enabled = true
+bus/6/name = &"Bedroom1"
+bus/6/solo = false
+bus/6/mute = false
+bus/6/bypass_fx = false
+bus/6/volume_db = -17.127237
+bus/6/send = &"Ambient"
+bus/6/effect/0/effect = SubResource("AudioEffectLowPassFilter_g28q7")
+bus/6/effect/0/enabled = true
+bus/7/name = &"Bedroom2"
+bus/7/solo = false
+bus/7/mute = false
+bus/7/bypass_fx = false
+bus/7/volume_db = -16.621807
+bus/7/send = &"Ambient"
+bus/7/effect/0/effect = SubResource("AudioEffectLowPassFilter_n8wo2")
+bus/7/effect/0/enabled = true
+bus/8/name = &"Distance"
+bus/8/solo = false
+bus/8/mute = false
+bus/8/bypass_fx = false
+bus/8/volume_db = 0.0
+bus/8/send = &"Master"
+bus/8/effect/0/effect = SubResource("AudioEffectLowPassFilter_5t1r3")
+bus/8/effect/0/enabled = true
+bus/8/effect/1/effect = SubResource("AudioEffectLimiter_g28q7")
+bus/8/effect/1/enabled = true
+bus/9/name = &"CheckIn"
+bus/9/solo = false
+bus/9/mute = false
+bus/9/bypass_fx = false
+bus/9/volume_db = -0.9015312
+bus/9/send = &"Master"
+bus/9/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/9/effect/0/enabled = true
+bus/10/name = &"Start"
+bus/10/solo = false
+bus/10/mute = false
+bus/10/bypass_fx = false
+bus/10/volume_db = 4.9756584
+bus/10/send = &"Master"
+bus/10/effect/0/effect = SubResource("AudioEffectReverb_n8wo2")
+bus/10/effect/0/enabled = true
+bus/10/effect/1/effect = SubResource("AudioEffectPitchShift_j3pel")
+bus/10/effect/1/enabled = true
+bus/10/effect/2/effect = SubResource("AudioEffectDistortion_g28q7")
+bus/10/effect/2/enabled = true

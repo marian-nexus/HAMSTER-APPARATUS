@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://nvwg0t37d31x"]
+
+[ext_resource type="PackedScene" uid="uid://cmnqfc0jvgi45" path="res://scene/room/objects/counter.tscn" id="1_fsg1u"]
+[ext_resource type="Texture2D" uid="uid://b2xs6mmhjcs3g" path="res://scene/room/textures/counter_side.png" id="2_4ltee"]
+[ext_resource type="Texture2D" uid="uid://dfy7jwr0n1ob4" path="res://scene/room/textures/wood.png" id="3_b3hy3"]
+[ext_resource type="Texture2D" uid="uid://8k4phyoyecgq" path="res://scene/room/textures/wood_specular.png" id="4_gfstk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ln3p"]
+albedo_texture = ExtResource("2_4ltee")
+roughness = 0.88
+uv1_scale = Vector3(3.027, 0.998, 0.5)
+uv1_offset = Vector3(-0.015, -0.023, 0)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_qil70"]
+material = SubResource("StandardMaterial3D_0ln3p")
+size = Vector3(1.2451782, 1.1474609, 0.014)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd31i"]
+albedo_texture = ExtResource("3_b3hy3")
+metallic = 0.88
+metallic_specular = 1.0
+metallic_texture = ExtResource("4_gfstk")
+roughness = 0.76
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_t8xt6"]
+material = SubResource("StandardMaterial3D_nd31i")
+size = Vector3(1.2854996, 0.10055542, 2.3492)
+
+[node name="CounterSide" unique_id=578234383 instance=ExtResource("1_fsg1u")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=701306484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12258911, 0.07373047, 1.8114434)
+mesh = SubResource("BoxMesh_qil70")
+
+[node name="MeshInstance3D7" parent="." index="2" unique_id=1365464437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14274979, 0.6723652, 0.6746)
+mesh = SubResource("BoxMesh_t8xt6")
+
+[node name="CollisionShape3D" parent="." index="3" unique_id=669617623]
+visible = false
+
+[node name="Front" type="Marker3D" parent="." index="4" unique_id=1372447520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.204738, -0.13879013, 1.2783012)

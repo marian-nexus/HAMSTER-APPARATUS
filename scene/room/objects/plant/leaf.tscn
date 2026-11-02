@@ -1,0 +1,37 @@
+[gd_scene format=4 uid="uid://fa1rvs5r5c50"]
+
+[ext_resource type="Material" uid="uid://dqnkisrthl45n" path="res://scene/room/textures/leaf_healthy.tres" id="1_q44ov"]
+[ext_resource type="Script" uid="uid://cqpkowgkb8gpu" path="res://addons/deformablemesh/dm_deformable_mesh.gd" id="2_4cdxn"]
+[ext_resource type="BoxMesh" uid="uid://bjiq0d83jffww" path="res://scene/room/objects/plant/leaf_mesh.tres" id="3_y3n3r"]
+[ext_resource type="Script" uid="uid://dcoxhmlrhhnhq" path="res://addons/deformablemesh/dm_std_deformer.gd" id="4_rswhj"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q44ov"]
+_surfaces = [{
+"aabb": AABB(-1.0618374, -1.0976778, -0.13979356, 2.1236749, 2.1953557, 0.27958712),
+"attribute_data": PackedByteArray("AAAAAAAAAACrqqo+AAAAAAAAAAAAAAA/q6qqPgAAAD+rqio/AAAAAAAAgD8AAAAAq6oqPwAAAD8AAIA/AAAAPwAAAAAAAAA/q6qqPgAAAD8AAAAAAACAP6uqqj4AAIA/q6qqPgAAAD+rqio/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AAAAPwAAgD8AAAA/q6oqPwAAgD8AAIA/AACAPw=="),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAAFAAYABQAHAAYAAQAEAAMABAAGAAMACAAJAAoACQALAAoADAANAA4ADQAPAA4AEAARABIAEQATABIA"),
+"material": ExtResource("1_q44ov"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("SuqHv7WAjD8LJg++SuqHP7WAjD8LJg8+SuqHv7WAjL8LJg8+SuqHP7WAjL8LJg++SuqHP7WAjD8LJg8+SuqHv7WAjD8LJg++SuqHP7WAjL8LJg++SuqHv7WAjL8LJg8+SuqHv7WAjD8LJg++SuqHv7WAjD8LJg++SuqHv7WAjL8LJg8+SuqHv7WAjL8LJg8+SuqHP7WAjD8LJg8+SuqHv7WAjD8LJg++SuqHP7WAjD8LJg8+SuqHv7WAjD8LJg++SuqHv7WAjL8LJg8+SuqHP7WAjL8LJg++SuqHv7WAjL8LJg8+SuqHP7WAjL8LJg++8gyc8hlmbIdhjfKMKXGsjp1yDHPflxyGDPNiDZGLCY1hjfKMKXGsjvIMnPIZZmyHDPNiDZGLCY2dcgxz35cchvIMnPIZZmyH8gyc8hlmbIedcgxz35cchp1yDHPflxyGYY3yjClxrI7yDJzyGWZsh2GN8owpcayO8gyc8hlmbIedcgxz35cchgzzYg2RiwmNnXIMc9+XHIYM82INkYsJjQ==")
+}]
+
+[node name="LeafMesh" type="MeshInstance3D" unique_id=1524485193 node_paths=PackedStringArray("deformers")]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999917, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_q44ov")
+script = ExtResource("2_4cdxn")
+original_mesh = ExtResource("3_y3n3r")
+deformers = [NodePath("StandardDeformer")]
+metadata/_custom_type_script = "uid://cqpkowgkb8gpu"
+
+[node name="StandardDeformer" type="MeshInstance3D" parent="." unique_id=1998445341]
+transform = Transform3D(1, 0, 0, 0, 1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0, 0)
+script = ExtResource("4_rswhj")
+type = 1
+second_axis = 2
+bending_angle = -15
+show_debug_mesh = false
+metadata/_custom_type_script = "uid://dcoxhmlrhhnhq"

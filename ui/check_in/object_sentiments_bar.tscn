@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dehtnqvwgduvy"]
+
+[ext_resource type="Script" uid="uid://buhqtl245adxm" path="res://ui/check_in/object_sentiments_bar.gd" id="1_amk1e"]
+
+[sub_resource type="Gradient" id="Gradient_ste50"]
+offsets = PackedFloat32Array(0, 0.9249756)
+colors = PackedColorArray(0.91, 0.91, 0.91, 1, 1, 0.938, 0.69, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_msaoy"]
+gradient = SubResource("Gradient_ste50")
+width = 15
+height = 165
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_f4b4l"]
+spacing_space = -2
+
+[sub_resource type="LabelSettings" id="LabelSettings_amk1e"]
+line_spacing = -4.0
+font = SubResource("FontVariation_f4b4l")
+font_size = 20
+font_color = Color(0.80784315, 0.9098039, 0.4745098, 1)
+shadow_color = Color(0.16736999, 0.21, 0.027299998, 0.34509805)
+
+[node name="ObjectSentimentsBar" type="VBoxContainer" unique_id=251965647]
+custom_maximum_size = Vector2(15, -1)
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 21.569)
+offset_transform_visual_only = false
+mouse_filter = 2
+theme_override_constants/separation = 2
+script = ExtResource("1_amk1e")
+
+[node name="Bar" type="TextureProgressBar" parent="." unique_id=322315768]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 1.131)
+offset_transform_pivot_ratio = Vector2(0.5, 1)
+offset_transform_visual_only = false
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+value = 100.0
+fill_mode = 3
+texture_progress = SubResource("GradientTexture2D_msaoy")
+
+[node name="Label" type="Label" parent="." unique_id=1662576985]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 16
+text = "a"
+label_settings = SubResource("LabelSettings_amk1e")
+horizontal_alignment = 1

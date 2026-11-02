@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cp1c18qb1c0dm"]
+
+[ext_resource type="Script" uid="uid://wnftrgxg7271" path="res://scene/room/objects/wall_space.gd" id="1_aob5m"]
+[ext_resource type="Texture2D" uid="uid://bqupyxqv0rvfu" path="res://scene/room/textures/wall_scribbles.png" id="2_4lxyj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vbuss"]
+size = Vector3(4, 3.5, 0.01)
+
+[node name="WallSpace" type="StaticBody3D" unique_id=1761402674]
+script = ExtResource("1_aob5m")
+
+[node name="DrawingBase" type="Sprite3D" parent="." unique_id=342904732]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="Drawings" type="Node3D" parent="." unique_id=1517839031]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="DrawingSpots" type="Node3D" parent="." unique_id=2003945550]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+visible = false
+
+[node name="1" type="Marker3D" parent="DrawingSpots" unique_id=1782793195]
+transform = Transform3D(0.9803477, 0.19727755, -1.7180568e-09, -0.19727755, 0.9803477, -1.724655e-08, -1.7180568e-09, 1.724655e-08, 1, 1.5924159, -0.39742088, 1.3921343e-07)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/1" unique_id=665186583]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="2" type="Marker3D" parent="DrawingSpots" unique_id=1799943148]
+transform = Transform3D(0.96088123, 0.27696082, -3.4198706e-09, -0.27696082, 0.96088123, -2.4212683e-08, -3.4198706e-09, 2.4212683e-08, 1, 0.9364315, 0.12050682, 8.1865444e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/2" unique_id=493508371]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="3" type="Marker3D" parent="DrawingSpots" unique_id=987610827]
+transform = Transform3D(0.94898045, 0.31533495, -4.4602686e-09, -0.31533495, 0.94898045, -2.7567456e-08, -4.4602686e-09, 2.7567456e-08, 1, 0.3685825, 1.0081141, 3.2222506e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/3" unique_id=1756178142]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="4" type="Marker3D" parent="DrawingSpots" unique_id=340986848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15052253, 0.1724717, -1.3159098e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/4" unique_id=296339177]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="5" type="Marker3D" parent="DrawingSpots" unique_id=946801832]
+transform = Transform3D(0.9715468, 0.23684765, -2.4874538e-09, -0.23684765, 0.9715468, -2.070588e-08, -2.4874538e-09, 2.070588e-08, 1, -0.31587487, -0.81067497, -2.7614659e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/5" unique_id=1705638811]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="6" type="Marker3D" parent="DrawingSpots" unique_id=1003396785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3476135, 0.11229801, -1.1781211e-07)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/6" unique_id=1187689190]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="7" type="Marker3D" parent="DrawingSpots" unique_id=309743380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7079625, 1.1218102, -6.1892045e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/7" unique_id=1731794075]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="8" type="Marker3D" parent="DrawingSpots" unique_id=1874397193]
+transform = Transform3D(0.9435283, 0.3312919, -4.936915e-09, -0.3312919, 0.9435283, -2.8962459e-08, -4.936915e-09, 2.8962459e-08, 1, -1.3872371, -1.1375737, -1.2127612e-07)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/8" unique_id=3345651]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="9" type="Marker3D" parent="DrawingSpots" unique_id=673510500]
+transform = Transform3D(0.9819015, -0.18939225, -1.5822224e-09, 0.18939225, 0.9819015, 1.6557197e-08, -1.5822224e-09, -1.6557197e-08, 1, 0.7118377, -0.9959861, 6.223083e-08)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/9" unique_id=906844535]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="10" type="Marker3D" parent="DrawingSpots" unique_id=1734028910]
+transform = Transform3D(0.9298272, -0.36799645, -6.134698e-09, 0.36799645, 0.9298272, 3.2171272e-08, -6.134698e-09, -3.2171272e-08, 1, 1.5413659, 1.0112109, 1.3475048e-07)
+metadata/_edit_group_ = true
+
+[node name="DrawingBase" type="Sprite3D" parent="DrawingSpots/10" unique_id=25467595]
+pixel_size = 0.004
+shaded = true
+double_sided = false
+texture_filter = 0
+texture = ExtResource("2_4lxyj")
+hframes = 5
+vframes = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=257469631]
+shape = SubResource("BoxShape3D_vbuss")
+
+[node name="Front" type="Marker3D" parent="." unique_id=145175891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5779157, -0.81389785)

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="RadioWave" format=3 uid="uid://broe4i614nw86"]
+
+[ext_resource type="Script" uid="uid://d1buy23ygsm5r" path="res://global/radio_wave.gd" id="1_db67p"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_db67p")

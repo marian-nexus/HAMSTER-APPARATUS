@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://byslgfqrxucim"]
+
+[sub_resource type="Gradient" id="Gradient_i1wvv"]
+colors = PackedColorArray(0.040680002, 0.18, 0.025199998, 1, 0.12752, 0.16, 0.020799998, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fk7y0"]
+gradient = SubResource("Gradient_i1wvv")
+width = 100
+height = 12
+
+[sub_resource type="Gradient" id="Gradient_6iv6x"]
+offsets = PackedFloat32Array(0, 0.9249756)
+colors = PackedColorArray(0.80784315, 0.9098039, 0.4745098, 1, 0.916, 1, 0.37, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2w1al"]
+gradient = SubResource("Gradient_6iv6x")
+width = 100
+height = 12
+
+[node name="CenterContainer" type="MarginContainer" unique_id=788119595]
+offset_right = 129.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 14
+
+[node name="StatVisualiser" type="TextureProgressBar" parent="." unique_id=148629660]
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_position_ratio = Vector2(0.1, 0)
+texture_under = SubResource("GradientTexture2D_fk7y0")
+texture_progress = SubResource("GradientTexture2D_2w1al")
